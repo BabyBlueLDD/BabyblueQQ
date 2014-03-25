@@ -1,0 +1,10 @@
+<project name="disl" default="compile" basedir=".">
+	<target name="compile">
+		<mkdir dir="bin" />
+		<javac srcdir="src" destdir="bin" debug="true" includeAntRuntime="false">
+		</javac>
+	</target>
+	<target name="clean">
+		<delete dir="bin" />
+	</target>
+</project>
