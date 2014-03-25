@@ -20,7 +20,7 @@ public class FileOperation {
 				name=ss[0];
 				pw=ss[1];
 				ui.setPassword(pw);
-				ul.m.put(name,ui);
+				ul.userInfoMap.put(name,ui);
 				
 			}
 			

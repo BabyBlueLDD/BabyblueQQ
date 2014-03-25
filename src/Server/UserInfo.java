@@ -1,7 +1,7 @@
 package Server;
 
 public class UserInfo {
-	String passWord;
+	String passWord = null; 
 	int status=0;//0:off 1:online
 	
 	public UserInfo(){
@@ -18,5 +18,4 @@ public class UserInfo {
 	public void setStatus(int i){
 		status=i;
 	}
-	
 }

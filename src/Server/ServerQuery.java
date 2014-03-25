@@ -31,7 +31,7 @@ public class ServerQuery {
 						ServerTest.count--;
 					}
 					flag=false;
-					ServerTest.ul.m.get(keyStr).status=0;
+					ServerTest.userList.userInfoMap.get(keyStr).status=0;
 					s.close();
 					
 				}else if(rStr.equals("1")){
@@ -50,7 +50,7 @@ public class ServerQuery {
 						
 						String newPW=bwr.receiveMessage(s);
 						
-						ServerTest.ul.m.remove(keyStr);
+						ServerTest.userList.userInfoMap.remove(keyStr);
 //						Collection values=u.m.values();
 //						Iterator it=values.iterator();
 //						while(it.hasNext()){
@@ -65,8 +65,8 @@ public class ServerQuery {
 	//						
 //						}
 						
-						ServerTest.ul.m.put(keyStr, new UserInfo(newPW, 1));
- 					ServerTest.ul.updateFile();
+						ServerTest.userList.userInfoMap.put(keyStr, new UserInfo(newPW, 1));
+ 					ServerTest.userList.updateFile();
 						//ServerTest.ul.debugMap();
 						bwr.sendMessage(s, "password is changed");
 //						flag=false;
